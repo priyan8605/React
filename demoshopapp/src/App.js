@@ -32,14 +32,16 @@ const App = () => {
     },
   ];
 
-  // function printProductData(data) {
-  //   console.log("i am inside APP.js")
-  //   console.log(data)
-  // }
+  function printProductData(data) {
+    console.log("i am inside APP.js")
+    console.log(data)
+  }
 
   return (
     <div>
-        <NewProduct />
+        <NewProduct pranay={printProductData}/>
+        {/* here 'pranay' props ke through hum parent function 'printProductData' pass krenge */}
+
       <Products items={products} />
     </div>
   );
