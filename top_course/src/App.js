@@ -18,7 +18,7 @@ useEffect(()=>
 {
   const fetchData=async()=>{
     try{
-      const res=await fetch(apiUrl);//jo bi data laayga apiUrl that will be stored in "res"
+      const res=await fetch(apiUrl);//jo bi data laayga apiUrl that will be stored in "res" 
       const output=await res.json();//jo bhi "res" ke andr data hai that will be converted into json format 
       // bcoz of res.json() and that json format data will be stored in "output" variable
       
@@ -36,13 +36,15 @@ useEffect(()=>
 },[]);//mounting ke time bss render hoga ooske baad nhi
 
   return (
-    <div>
+  <div>
       
       <Navbar/>
       <Filter 
       filterData={filterData}
       />
       <Cards courses={courses}/>
+
+                                                                                                     
   </div>
   )
 }
