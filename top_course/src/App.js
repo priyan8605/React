@@ -65,7 +65,7 @@ function App() {
       <div className="w-11/12 max-w-[1200px] min-h-[50vh] mx-auto flex flex-wrap justify-center items-center">
       {/* agr "loading" ka value true hai then "spinner" will be seen and if "loading" value
       is false then spinner won't be seen instead cards will be seen*/}
-     { loading?(<Spinner/>):(<Cards courses={courses}/>)}
+     { loading?(<Spinner/>):(<Cards courses={courses} category={category}/>)}
       </div>
     </div >
       <div>
