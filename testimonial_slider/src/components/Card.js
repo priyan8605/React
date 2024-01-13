@@ -6,39 +6,33 @@ const Card=(props)=>{
     let review=props.review;
     // data.js me 5 reviews hai but ek Card me ek hi review aa skta hai
     return(
-        <div>
-            <div>
-               <img src={review.image} alt=""/> 
+        <div className="flex flex-col md:relative">
+            <div className="absolute top-[-7rem] z-10 mx-auto ">
+               <img src={review.image} alt="" className="aspect-square rounded-full w-[140px] h-[140px] z-25"/> 
+               <div className="w-[140px] h-[140px] bg-violet-500 rounded-full absolute top-[-6px] z-[-10] left-[10px]"></div>
             </div>
 
-            <div>
+            <div className="text-center mt-7">
                 <p>{review.name }</p>
             </div>
 
-            <div>
+            <div className="text-center mt-4">
                 <p>{review.job}</p>
             </div>
 
-            <div>
+            <div className="text-violet-400 mx-auto mt-5">
             <FaQuoteLeft />
             </div>
 
-            <div>
+            <div className="text-center mt-4 text-slate-500 ">
                 <p>{review.text}</p>
             </div>
 
-            <div>
+            <div className="text-violet-400 mx-auto mt-5">
                 <FaQuoteRight/>
             </div>
 
-            <div>
-                <button>◀</button>
-                <button>▶</button>
-            </div>
-
-            <div>
-                <button>Surprise Me</button>
-            </div>
+            
         </div>
     )
 }
